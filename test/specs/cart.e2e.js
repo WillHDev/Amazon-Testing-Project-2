@@ -36,11 +36,11 @@ describe('Cart Flow', () => {
     //Sticking Point: forgot to use expect with .toHaveText
     // mistakenly read the error saying element not found
     //actual error: Can't call "toHaveText" on element with selector ".a-size-medium-plus",
-    // it is not a function
+    // it is not a function.
     await expect($('.a-size-medium-plus'))
     .toHaveText('Added to Cart');
     //await expect($('.sw-subtotal-amount span[class="a-offscreen"]')).toHaveText(devicePrice);
-
+    
 
     const subtotal = await browser.execute(() => {
       return document.querySelector('.sw-subtotal-amount span[class="a-offscreen"]').textContent
